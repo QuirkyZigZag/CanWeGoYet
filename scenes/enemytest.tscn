@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bihb71nxu608l"]
+
+[ext_resource type="Texture2D" uid="uid://cyh8eykvpm82f" path="res://assets/art/placeholderperson.png" id="1_41f4e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_41f4e"]
+size = Vector3(0.6191406, 1.8376465, 0.8408203)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_41f4e"]
+radius = 0.49169874
+
+[node name="enemytest" type="CharacterBody3D" unique_id=1649739904 groups=["enemy"]]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=317351857 groups=["enemy"]]
+shape = SubResource("BoxShape3D_41f4e")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=468464108 groups=["enemy"]]
+pixel_size = 0.002
+billboard = 2
+transparent = false
+double_sided = false
+no_depth_test = true
+render_priority = 1
+texture = ExtResource("1_41f4e")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=743429506 groups=["enemy"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=779154314 groups=["enemy"]]
+shape = SubResource("SphereShape3D_41f4e")

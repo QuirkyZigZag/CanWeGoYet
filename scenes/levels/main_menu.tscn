@@ -1,0 +1,296 @@
+[gd_scene format=3 uid="uid://bomuruq1wd0me"]
+
+[ext_resource type="Script" uid="uid://ba6gefq6wb5sl" path="res://scripts/menu_container.gd" id="1_721jg"]
+[ext_resource type="Script" uid="uid://jjxf6f8ymoa" path="res://scripts/scene_change_button.gd" id="1_leamy"]
+[ext_resource type="Script" uid="uid://nfekeerd1th1" path="res://scripts/menu_change_button.gd" id="2_721jg"]
+[ext_resource type="FontFile" uid="uid://ddrx2swd5vaua" path="res://assets/fonty/The Hand Black.otf" id="2_geflf"]
+[ext_resource type="Texture2D" uid="uid://dntjf3vpe61lb" path="res://assets/art/2dart/crowd_frame1.png" id="5_keln3"]
+[ext_resource type="Texture2D" uid="uid://dxramahyymx7t" path="res://assets/art/2dart/crowd_frame_2.png" id="6_crctu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sn5u3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_keln3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_crctu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="main_menu" type="Node2D" unique_id=1565086399]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1541486837]
+
+[node name="menu_container" type="Control" parent="CanvasLayer" unique_id=927002084]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_721jg")
+
+[node name="main_container" type="Control" parent="CanvasLayer/menu_container" unique_id=1393844477]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title_container" type="VBoxContainer" parent="CanvasLayer/menu_container/main_container" unique_id=1607765081]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -478.5
+offset_right = 478.5
+offset_bottom = 137.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="TITLE" type="Label" parent="CanvasLayer/menu_container/main_container/title_container" unique_id=443515823]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_geflf")
+theme_override_font_sizes/font_size = 200
+text = "Can We Go Yet?"
+horizontal_alignment = 1
+
+[node name="header" type="Label" parent="CanvasLayer/menu_container/main_container/title_container" unique_id=2129030123]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.078431375, 0.078431375, 0.078431375, 0.6745098)
+theme_override_fonts/font = ExtResource("2_geflf")
+theme_override_font_sizes/font_size = 64
+text = "made by Toby T, Isabel S, James Y and Tristan S"
+horizontal_alignment = 1
+
+[node name="button_container" type="VBoxContainer" parent="CanvasLayer/menu_container/main_container" unique_id=811808948]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -129.0
+offset_top = -456.0
+offset_right = 130.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="PLAY_button" type="Button" parent="CanvasLayer/menu_container/main_container/button_container" unique_id=326818202]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_geflf")
+theme_override_font_sizes/font_size = 90
+text = "    PLAY    "
+icon_alignment = 1
+script = ExtResource("1_leamy")
+change_to_scene = "res://scenes/levels/mainscene.tscn"
+
+[node name="TUTORIAL_button" type="Button" parent="CanvasLayer/menu_container/main_container/button_container" unique_id=314673106]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_geflf")
+theme_override_font_sizes/font_size = 90
+text = "  TUTORIAL "
+icon_alignment = 1
+script = ExtResource("1_leamy")
+change_to_scene = "res://scenes/levels/tutorial_scene.tscn"
+
+[node name="ABOUT_button" type="Button" parent="CanvasLayer/menu_container/main_container/button_container" unique_id=940031147 node_paths=PackedStringArray("load_menu")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_geflf")
+theme_override_font_sizes/font_size = 90
+text = "   ABOUT    "
+icon_alignment = 1
+script = ExtResource("2_721jg")
+load_menu = NodePath("../../../about_menu")
+
+[node name="settings_menu" type="Control" parent="CanvasLayer/menu_container" unique_id=1110933530]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/menu_container/settings_menu" unique_id=909142209]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.188235, 0.188235, 0.188235, 0.882353)
+
+[node name="mute_button" type="CheckButton" parent="CanvasLayer/menu_container/settings_menu" unique_id=1130692718]
+z_index = 4
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = 15.0
+offset_right = 22.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="volume_rocker" type="HSlider" parent="CanvasLayer/menu_container/settings_menu" unique_id=1397174949]
+z_index = 4
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -19.5
+offset_right = 34.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+value = 50.0
+
+[node name="BACK" type="Button" parent="CanvasLayer/menu_container/settings_menu" unique_id=1692931991 node_paths=PackedStringArray("load_menu")]
+z_index = 4
+layout_mode = 1
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 163.0
+offset_bottom = 102.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_geflf")
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+script = ExtResource("2_721jg")
+load_menu = NodePath("..")
+menu_on = false
+
+[node name="about_menu" type="Control" parent="CanvasLayer/menu_container" unique_id=1354343539]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="about_text" type="Label" parent="CanvasLayer/menu_container/about_menu" unique_id=1765051484]
+z_index = 3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.5
+offset_top = -37.5
+offset_right = 177.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_geflf")
+theme_override_font_sizes/font_size = 40
+text = "This was made for the global Jam 2026
+
+Toby (me) did the game development and programming
+
+Isabel did the 2d artwork
+
+James did the soundtrack
+
+James and Isabel are very talented so you should go check them out, James on 
+resampler.xyz
+"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/menu_container/about_menu" unique_id=2077050665]
+z_index = 1
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.172549, 0.172549, 0.172549, 0.952941)
+
+[node name="about_bg" type="ColorRect" parent="CanvasLayer/menu_container/about_menu" unique_id=2110210359]
+z_index = 2
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -506.0
+offset_top = -355.0
+offset_right = 484.0
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.192157, 0.192157, 0.192157, 0.792157)
+
+[node name="BACK" type="Button" parent="CanvasLayer/menu_container/about_menu" unique_id=1592971571 node_paths=PackedStringArray("load_menu")]
+z_index = 2
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 163.0
+offset_bottom = 102.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_geflf")
+theme_override_font_sizes/font_size = 50
+text = "BACK"
+script = ExtResource("2_721jg")
+load_menu = NodePath("..")
+menu_on = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=40145708]
+position = Vector2(353.00003, 674.00006)
+scale = Vector2(0.3638889, 0.3638889)
+sprite_frames = SubResource("SpriteFrames_sn5u3")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=624390710]
+position = Vector2(1502.9999, 658.00006)
+scale = Vector2(0.3638889, 0.3638889)
+sprite_frames = SubResource("SpriteFrames_sn5u3")
+autoplay = "default"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=839599845]
+z_index = -5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0.60933006, 0.6093301, 0.60933006, 1)

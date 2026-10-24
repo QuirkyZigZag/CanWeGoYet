@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://chevkt58crnv"]
+
+[ext_resource type="PackedScene" uid="uid://dcv7xvc8j4b7k" path="res://assets/props/GLTF format/doorwayFront.glb" id="1_rrua7"]
+[ext_resource type="PackedScene" uid="uid://bkpd2ikoh1grh" path="res://assets/props/GLTF format/doorwayOpen.glb" id="2_cf47k"]
+[ext_resource type="PackedScene" uid="uid://3g6qs87xca77" path="res://assets/props/GLTF format/dryer.glb" id="3_m6gu7"]
+[ext_resource type="PackedScene" uid="uid://mhv1ge41wip7" path="res://assets/props/GLTF format/floorFull.glb" id="4_f17b3"]
+[ext_resource type="PackedScene" uid="uid://bb1ikm1q11ws" path="res://assets/props/GLTF format/kitchenBarEnd.glb" id="5_6aar4"]
+[ext_resource type="PackedScene" uid="uid://v8jdmitk534y" path="res://assets/props/GLTF format/kitchenFridge.glb" id="6_d7weo"]
+[ext_resource type="PackedScene" uid="uid://bbbkuo2xlxqq0" path="res://assets/props/GLTF format/kitchenFridgeLarge.glb" id="7_umuwl"]
+[ext_resource type="PackedScene" uid="uid://dolxiuwal75an" path="res://assets/props/GLTF format/kitchenFridgeSmall.glb" id="8_7bqd3"]
+[ext_resource type="PackedScene" uid="uid://dhcqn0ot6fwyg" path="res://assets/props/GLTF format/kitchenSink.glb" id="9_qe5po"]
+[ext_resource type="PackedScene" uid="uid://fap7qtefx2c" path="res://assets/props/GLTF format/kitchenStove.glb" id="10_1tlmf"]
+[ext_resource type="PackedScene" uid="uid://dbem7pqfj2l10" path="res://assets/props/GLTF format/lampRoundFloor.glb" id="11_7670p"]
+[ext_resource type="PackedScene" uid="uid://d1vlmoah12jyk" path="res://assets/props/GLTF format/lampSquareTable.glb" id="12_byla3"]
+[ext_resource type="PackedScene" uid="uid://cjlouqkv7w77c" path="res://assets/props/GLTF format/laptop.glb" id="13_jmob6"]
+[ext_resource type="PackedScene" uid="uid://chkloepb1muw7" path="res://assets/props/GLTF format/loungeSofaCorner.glb" id="14_andld"]
+[ext_resource type="PackedScene" uid="uid://gv2p4fx72ko" path="res://assets/props/GLTF format/loungeSofaLong.glb" id="15_0icll"]
+[ext_resource type="PackedScene" uid="uid://bx5qv2og1yr0" path="res://assets/props/GLTF format/paneling.glb" id="16_ipucd"]
+[ext_resource type="PackedScene" uid="uid://cd80cv275m0yc" path="res://assets/props/GLTF format/rugRounded.glb" id="17_nw8cd"]
+[ext_resource type="PackedScene" uid="uid://cnbwbv22g3yfe" path="res://assets/props/GLTF format/stairsOpen.glb" id="18_f013r"]
+[ext_resource type="PackedScene" uid="uid://belr2kekqu4kf" path="res://assets/props/GLTF format/stairsOpenSingle.glb" id="19_0fcml"]
+[ext_resource type="PackedScene" uid="uid://fevain2ttitu" path="res://assets/props/GLTF format/stoolBarSquare.glb" id="20_scf3d"]
+[ext_resource type="PackedScene" uid="uid://5w6lp5acylsv" path="res://assets/props/GLTF format/wallDoorwayWide.glb" id="21_70bud"]
+[ext_resource type="PackedScene" uid="uid://da78jphhp4afr" path="res://assets/props/GLTF format/wallDoorway.glb" id="22_b0jvj"]
+[ext_resource type="PackedScene" uid="uid://bjkdkbvfl8tx2" path="res://assets/props/GLTF format/washer.glb" id="23_phtmh"]
+[ext_resource type="PackedScene" uid="uid://dkh7mm6sxgoq" path="res://assets/props/GLTF format/kitchenStoveElectric.glb" id="24_f17b3"]
+[ext_resource type="PackedScene" uid="uid://dwbixji3helf1" path="res://assets/props/GLTF format/kitchenCabinet.glb" id="25_6aar4"]
+[ext_resource type="PackedScene" uid="uid://dc48n1oecsdwn" path="res://assets/props/GLTF format/kitchenBar.glb" id="26_d7weo"]
+[ext_resource type="PackedScene" uid="uid://b6se6lir7xyc1" path="res://assets/props/GLTF format/kitchenCabinetCornerInner.glb" id="27_7bqd3"]
+[ext_resource type="PackedScene" uid="uid://22do716ree8e" path="res://assets/props/GLTF format/kitchenCabinetCornerRound.glb" id="28_qe5po"]
+[ext_resource type="PackedScene" uid="uid://bhkgspyd1ldhu" path="res://assets/props/GLTF format/kitchenCabinetUpperDouble.glb" id="29_1tlmf"]
+[ext_resource type="PackedScene" uid="uid://bn8mfby68njeh" path="res://assets/props/GLTF format/kitchenCoffeeMachine.glb" id="30_7670p"]
+[ext_resource type="PackedScene" uid="uid://c2yw4rgnm015g" path="res://assets/props/GLTF format/doorway.glb" id="31_qe5po"]
+
+[node name="Node3D" type="Node3D" unique_id=456171186]
+
+[node name="doorwayFront" parent="." unique_id=672316786 instance=ExtResource("1_rrua7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0756226, 0, 0.080444336)
+
+[node name="doorwayOpen" parent="." unique_id=774887011 instance=ExtResource("2_cf47k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25616455, 0, -0.016479492)
+
+[node name="dryer" parent="." unique_id=670660215 instance=ExtResource("3_m6gu7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9439697, 0, -0.20739746)
+
+[node name="floorFull" parent="." unique_id=1236052512 instance=ExtResource("4_f17b3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0377808, 0, 3.020996)
+
+[node name="kitchenBarEnd" parent="." unique_id=880555207 instance=ExtResource("5_6aar4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5002441, 0, 3.279541)
+
+[node name="kitchenFridge" parent="." unique_id=153330172 instance=ExtResource("6_d7weo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9344482, 0, 2.1671143)
+
+[node name="kitchenFridgeLarge" parent="." unique_id=327062767 instance=ExtResource("7_umuwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9824829, 0, 0.20507813)
+
+[node name="kitchenFridgeSmall" parent="." unique_id=1317823594 instance=ExtResource("8_7bqd3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15551758, 0, 1.6118164)
+
+[node name="kitchenSink" parent="." unique_id=882056386 instance=ExtResource("9_qe5po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1924438, 0, 1.8702393)
+
+[node name="kitchenStove" parent="." unique_id=900037774 instance=ExtResource("10_1tlmf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.736023, 0, 1.9072266)
+
+[node name="lampRoundFloor" parent="." unique_id=218476049 instance=ExtResource("11_7670p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5944214, 0, 3.9296875)
+
+[node name="lampSquareTable" parent="." unique_id=1748076725 instance=ExtResource("12_byla3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6050415, 0, 1.9736328)
+
+[node name="laptop" parent="." unique_id=686053440 instance=ExtResource("13_jmob6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.51556396, 0, 3.821167)
+
+[node name="loungeSofaCorner" parent="." unique_id=1726163990 instance=ExtResource("14_andld")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9368896, 0, 1.3448486)
+
+[node name="loungeSofaLong" parent="." unique_id=23338861 instance=ExtResource("15_0icll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9890137, 0, 3.3085938)
+
+[node name="paneling" parent="." unique_id=637220918 instance=ExtResource("16_ipucd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1150513, 0, 5.434326)
+
+[node name="rugRounded" parent="." unique_id=546351389 instance=ExtResource("17_nw8cd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0186157, 0, 5.6435547)
+
+[node name="stairsOpen" parent="." unique_id=1443575560 instance=ExtResource("18_f013r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7581177, 0, 5.345215)
+
+[node name="stairsOpenSingle" parent="." unique_id=1564694883 instance=ExtResource("19_0fcml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4904785, 0, 6.2141113)
+
+[node name="stoolBarSquare" parent="." unique_id=485118845 instance=ExtResource("20_scf3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.931961, 0, 4.672119)
+
+[node name="wallDoorwayWide" parent="." unique_id=597716695 instance=ExtResource("21_70bud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6022491, 0, 3.633789)
+
+[node name="wallDoorway" parent="." unique_id=778588383 instance=ExtResource("22_b0jvj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4310913, 0, 5.2506104)
+
+[node name="washer" parent="." unique_id=1182712811 instance=ExtResource("23_phtmh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.256378, 0, 4.055176)
+
+[node name="kitchenStoveElectric" parent="." unique_id=777831938 instance=ExtResource("24_f17b3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2401886, 0, 1.954956)
+
+[node name="kitchenCabinet" parent="." unique_id=1225888511 instance=ExtResource("25_6aar4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7732086, 0, 1.8746338)
+
+[node name="kitchenBar" parent="." unique_id=1597143154 instance=ExtResource("26_d7weo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7426147, 0, 0.97314453)
+
+[node name="kitchenCabinetCornerInner" parent="." unique_id=1375282516 instance=ExtResource("27_7bqd3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7442627, 0, 0.3083496)
+
+[node name="kitchenCabinetCornerRound" parent="." unique_id=1690289840 instance=ExtResource("28_qe5po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32252502, 0, 0.11376953)
+
+[node name="kitchenCabinetUpperDouble" parent="." unique_id=1175906607 instance=ExtResource("29_1tlmf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3570404, 0, -0.48010254)
+
+[node name="kitchenCoffeeMachine" parent="." unique_id=1184822881 instance=ExtResource("30_7670p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5456848, 0, 0.842041)
+
+[node name="doorway" parent="." unique_id=2111305713 instance=ExtResource("31_qe5po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.70051575, 0, 1.6044922)

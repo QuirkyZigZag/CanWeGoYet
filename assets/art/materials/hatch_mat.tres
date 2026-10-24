@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dff1b8tudwn5q"]
+
+[ext_resource type="Shader" uid="uid://dw1wky14vbify" path="res://assets/art/shaderstuff/hatch_shader.gdshader" id="1_jl1ig"]
+[ext_resource type="Texture2D" uid="uid://c1nck7rfg8mf6" path="res://assets/art/shaderstuff/Hatching.jpg" id="2_jknk0"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_jl1ig")
+shader_parameter/size = 0.4
+shader_parameter/intensity = 0.01
+shader_parameter/frame_time = 0.3
+shader_parameter/light_direction = Vector3(-0.483, 0.866, -0.129)
+shader_parameter/hatch = ExtResource("2_jknk0")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/hatch_size = 3.2

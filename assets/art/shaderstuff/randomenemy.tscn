@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ce5s4sq3xxbbq"]
+
+[ext_resource type="Texture2D" uid="uid://cyh8eykvpm82f" path="res://assets/art/placeholderperson.png" id="1_jgddd"]
+
+[node name="randomenemy" type="Sprite3D" unique_id=289783082]
+texture = ExtResource("1_jgddd")

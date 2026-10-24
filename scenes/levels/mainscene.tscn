@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://51kwx5u0vav5"]
+
+[ext_resource type="PackedScene" uid="uid://bqdcjkgl4nanw" path="res://scenes/level_construction_scenes/props_scene.tscn" id="5_0q5xc"]
+[ext_resource type="PackedScene" uid="uid://dyd3kqkvacd32" path="res://scenes/crowd.tscn" id="6_gmcjo"]
+[ext_resource type="PackedScene" uid="uid://bafd5se8xy0jo" path="res://scenes/person.tscn" id="6_nl1e7"]
+[ext_resource type="Material" uid="uid://dff1b8tudwn5q" path="res://assets/art/materials/hatch_mat.tres" id="6_qbe7l"]
+[ext_resource type="PackedScene" uid="uid://cfewxpc7umd0x" path="res://scenes/levels/player.tscn" id="9_0xymu"]
+
+[sub_resource type="Environment" id="Environment_bqt2v"]
+background_mode = 1
+background_color = Color(1, 1, 1, 1)
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 2.32
+tonemap_exposure = 0.33
+tonemap_agx_white = 2.0
+tonemap_agx_contrast = 9.2
+adjustment_enabled = true
+adjustment_saturation = 0.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qbe7l"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_qbe7l"]
+vertices = PackedVector3Array(9.21318, 0.2952795, -5.800606, 9.21318, 1.5452795, -9.300606, 8.96318, 0.2952795, -5.800606, 9.21318, 0.2952795, -6.9672723, 9.046513, 0.2952795, -6.9672728, 9.96318, 0.2952795, -5.050606, 8.21318, 0.2952795, -5.050606, 8.71318, 0.2952795, 0.44939423, 8.96318, 0.2952795, 0.9493942, 9.96318, 0.2952795, 0.19939423, -0.03682065, 0.2952795, -0.5506058, 0.96317935, 0.2952795, -0.30060577, 6.7131796, 0.2952795, 0.19939423, 6.7131796, 0.2952795, -5.800606, 6.2131796, 0.2952795, -8.550606, -0.03682065, 0.2952795, -8.550606, 6.9631796, 0.2952795, 0.6993942, 7.4631796, 0.2952795, -5.050606, 11.71318, 0.2952795, 0.19939423, 11.46318, 0.2952795, -5.050606, 1.4631793, 0.2952795, 0.44939423, 11.71318, 0.2952795, -7.300606, 14.46318, 0.2952795, -7.300606, 14.46318, 0.2952795, -9.050606, 11.46318, 0.2952795, -9.050606, 3.4631793, 0.2952795, 2.1993942, 3.4631793, 0.2952795, 2.6993942, 5.4631796, 0.2952795, 2.6993942, 5.4631796, 0.2952795, 2.1993942)
+polygons = [PackedInt32Array(2, 4, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(3, 4, 1), PackedInt32Array(0, 5, 2), PackedInt32Array(2, 5, 6), PackedInt32Array(8, 7, 9), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 13), PackedInt32Array(13, 10, 14), PackedInt32Array(14, 10, 15), PackedInt32Array(16, 12, 7), PackedInt32Array(7, 12, 9), PackedInt32Array(9, 12, 6), PackedInt32Array(9, 6, 5), PackedInt32Array(17, 6, 12), PackedInt32Array(5, 19, 9), PackedInt32Array(9, 19, 18), PackedInt32Array(13, 17, 12), PackedInt32Array(12, 20, 11), PackedInt32Array(22, 21, 23), PackedInt32Array(23, 21, 24), PackedInt32Array(28, 27, 25), PackedInt32Array(25, 27, 26)]
+geometry_parsed_geometry_type = 0
+agent_radius = 1.0
+
+[node name="mainscene" type="Node3D" unique_id=255981063]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=294981814]
+environment = SubResource("Environment_bqt2v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=864554886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.62216, 0.6622294, -3.1974845)
+mesh = SubResource("CapsuleMesh_qbe7l")
+surface_material_override/0 = ExtResource("6_qbe7l")
+
+[node name="Player" parent="." unique_id=1668216989 instance=ExtResource("9_0xymu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.06379, 0.72282946, 1.9067965)
+
+[node name="crowd" parent="." unique_id=2130820471 instance=ExtResource("6_gmcjo")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 8.767405, 0.41842914, -2.0101929)
+
+[node name="crowd3" parent="." unique_id=1758226766 instance=ExtResource("6_gmcjo")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 4.6790333, 0.41842914, -8.281576)
+
+[node name="crowd2" parent="." unique_id=1823047816 instance=ExtResource("6_gmcjo")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.2936697, 0.38662088, -3.2663581)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=2143264916]
+navigation_mesh = SubResource("NavigationMesh_qbe7l")
+
+[node name="props_scene" parent="NavigationRegion3D" unique_id=29973386 instance=ExtResource("5_0q5xc")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -0.003937125, -0.16334511, -9.604984)
+
+[node name="person" parent="." unique_id=2090233463 instance=ExtResource("6_nl1e7")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 5.665518, 0.38171053, -2.9740157)

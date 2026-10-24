@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://by5oaq8t54b7i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbe7l"]
+albedo_color = Color(0.36910734, 0.36910734, 0.3691073, 1)
+
+[node name="floor" type="CSGBox3D" unique_id=1529985829]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+use_collision = true
+flip_faces = true
+size = Vector3(17.073135, 0, 14.35743)
+material = SubResource("StandardMaterial3D_qbe7l")

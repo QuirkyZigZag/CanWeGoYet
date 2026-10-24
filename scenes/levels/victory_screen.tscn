@@ -1,0 +1,222 @@
+[gd_scene format=3 uid="uid://c5ltt1hoyuk53"]
+
+[ext_resource type="Texture2D" uid="uid://cyar31lwxgau4" path="res://assets/art/2dart/text_bubble_3.png" id="1_qldvl"]
+[ext_resource type="FontFile" uid="uid://c2scu7k5v1e18" path="res://assets/art/2dart/The Hand Black.otf" id="2_puyy2"]
+[ext_resource type="Texture2D" uid="uid://db2fk4qwsdgm5" path="res://assets/art/2dart/text bubble_1.png" id="6_vpn25"]
+[ext_resource type="Texture2D" uid="uid://cvrtg0kdxnf3a" path="res://assets/art/2dart/phone.png" id="7_dfe5h"]
+[ext_resource type="FontFile" uid="uid://ddrx2swd5vaua" path="res://assets/fonty/The Hand Black.otf" id="7_puyy2"]
+[ext_resource type="Texture2D" uid="uid://dntjf3vpe61lb" path="res://assets/art/2dart/crowd_frame1.png" id="8_cbjn7"]
+[ext_resource type="Script" uid="uid://jjxf6f8ymoa" path="res://scripts/scene_change_button.gd" id="8_s3c7b"]
+[ext_resource type="Texture2D" uid="uid://dxramahyymx7t" path="res://assets/art/2dart/crowd_frame_2.png" id="9_d3ef8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t3ymg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_cbjn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d3ef8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="VictoryScreen" type="Node2D" unique_id=485155994]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=38367898]
+
+[node name="Control" type="Control" parent="CanvasLayer2" unique_id=1863823259]
+z_as_relative = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="phone" type="TextureRect" parent="CanvasLayer2" unique_id=1150014748]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -648.0
+offset_top = -110.0
+offset_right = 913.0
+offset_bottom = 1244.0
+grow_horizontal = 2
+texture = ExtResource("7_dfe5h")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/phone" unique_id=176869754]
+z_index = -1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -377.5
+offset_top = 193.0
+offset_right = 179.5
+offset_bottom = 1173.0
+grow_horizontal = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer2/phone/ColorRect" unique_id=443451111]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -278.5
+offset_top = 5.0
+offset_right = 270.5
+offset_bottom = 975.0
+grow_horizontal = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer2/phone/ColorRect/Panel" unique_id=889355933]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -272.5
+offset_top = -3.0
+offset_right = 274.5
+offset_bottom = 690.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2/phone/ColorRect/Panel/ScrollContainer" unique_id=1824497742]
+layout_mode = 2
+alignment = 2
+
+[node name="texts" type="Label" parent="CanvasLayer2/phone/ColorRect/Panel/ScrollContainer/VBoxContainer" unique_id=402966524]
+layout_mode = 2
+text = "kdkkdowkdwdwdwddwd                                        
+d
+dd
+d
+
+dd
+d
+d
+d
+d
+d
+d
+dd
+d
+d
+d
+d
+d
+d
+dd
+d
+d
+d
+d
+d
+d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+
+[node name="textmessage11" type="Sprite2D" parent="CanvasLayer2/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=910347433]
+position = Vector2(193, 97.20007)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_qldvl")
+region_enabled = true
+region_rect = Rect2(655.6184, 375.26425, 485.03015, 228.24948)
+
+[node name="text1" type="Label" parent="CanvasLayer2/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/textmessage11" unique_id=2089192868]
+offset_left = -192.49998
+offset_top = -76.25003
+offset_right = 255.50002
+offset_bottom = 76.74997
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_puyy2")
+theme_override_font_sizes/font_size = 30
+text = "LOL you weren't half bad tn maybe I will make you 
+come out with me more XD"
+
+[node name="text_message9" type="Sprite2D" parent="CanvasLayer2/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=45159239]
+position = Vector2(314.00012, 219.20007)
+rotation = -3.1415927
+scale = Vector2(0.8, -0.8)
+texture = ExtResource("6_vpn25")
+region_enabled = true
+region_rect = Rect2(665.46686, 429.06674, 464.93353, 121.73337)
+
+[node name="Button" type="Button" parent="CanvasLayer2/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=1468360205]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 193.0
+offset_right = 459.0
+offset_bottom = 245.396
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_puyy2")
+theme_override_font_sizes/font_size = 30
+text = "I don't want to be your friend anymore."
+script = ExtResource("8_s3c7b")
+change_to_scene = "res://scenes/levels/main_menu.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=215696513]
+z_index = -5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0.60933006, 0.6093301, 0.60933006, 1)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer2/ColorRect" unique_id=668418848]
+position = Vector2(1528.0001, 574.00006)
+scale = Vector2(0.3638889, 0.3638889)
+sprite_frames = SubResource("SpriteFrames_t3ymg")
+autoplay = "default"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="CanvasLayer2/ColorRect" unique_id=1235671932]
+position = Vector2(450.00012, 582.00006)
+scale = Vector2(0.3638889, 0.3638889)
+sprite_frames = SubResource("SpriteFrames_t3ymg")
+autoplay = "default"

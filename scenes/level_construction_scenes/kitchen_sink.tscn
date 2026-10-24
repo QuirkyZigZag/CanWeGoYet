@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cixb7miqysen"]
+
+[ext_resource type="PackedScene" uid="uid://cfcikl5qd1y22" path="res://assets/props/kitchenstuff/kitchenSink.glb" id="1_68pyc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p1pim"]
+size = Vector3(0.43, 0.48999998, 0.45)
+
+[node name="kitchenSink" unique_id=1053430814 instance=ExtResource("1_68pyc")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="kitchenSink(Clone)" parent_id_path=PackedInt32Array(1617639843) index="1" unique_id=1726131436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.215, 0.24499999, -0.225)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kitchenSink(Clone)/StaticBody3D" index="0" unique_id=85885595]
+shape = SubResource("BoxShape3D_p1pim")

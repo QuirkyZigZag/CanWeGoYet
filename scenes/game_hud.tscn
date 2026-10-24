@@ -1,0 +1,655 @@
+[gd_scene format=3 uid="uid://u4e7xft0hd8q"]
+
+[ext_resource type="Script" uid="uid://nfekeerd1th1" path="res://scripts/menu_change_button.gd" id="1_jna2d"]
+[ext_resource type="Script" uid="uid://ba381rw2h3766" path="res://scenes/game_hud.gd" id="1_pexd4"]
+[ext_resource type="FontFile" uid="uid://ddrx2swd5vaua" path="res://assets/fonty/The Hand Black.otf" id="2_bthj5"]
+[ext_resource type="Script" uid="uid://jjxf6f8ymoa" path="res://scripts/scene_change_button.gd" id="2_n64bn"]
+[ext_resource type="FontFile" uid="uid://b80pwt53nx68g" path="res://assets/fonty/The Hand Bold.otf" id="3_qeyxp"]
+[ext_resource type="Texture2D" uid="uid://dgn4gs8uuf3sk" path="res://assets/art/2dart/hand_frame_1.png" id="5_olodv"]
+[ext_resource type="Texture2D" uid="uid://cfknx2eof7n6l" path="res://assets/art/2dart/hand_frame_2.png" id="6_cai0h"]
+[ext_resource type="Texture2D" uid="uid://05t1edvslged" path="res://assets/art/2dart/hand_frame_3.png" id="7_bthj5"]
+[ext_resource type="Texture2D" uid="uid://b7ptrotstali8" path="res://assets/art/2dart/handwave.png" id="9_cai0h"]
+
+[sub_resource type="Gradient" id="Gradient_qeyxp"]
+colors = PackedColorArray(0, 0, 0, 1, 0.11612665, 0.116126575, 0.116126545, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4h3m3"]
+gradient = SubResource("Gradient_qeyxp")
+
+[sub_resource type="Gradient" id="Gradient_bthj5"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qeyxp"]
+gradient = SubResource("Gradient_bthj5")
+
+[sub_resource type="Gradient" id="Gradient_gvb8p"]
+offsets = PackedFloat32Array(0, 0.971223, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.1504191, 0.15041913, 0.1504191, 1, 0.15487596, 0.154876, 0.15487596, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hwndf"]
+gradient = SubResource("Gradient_gvb8p")
+
+[sub_resource type="Gradient" id="Gradient_cai0h"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bthj5"]
+gradient = SubResource("Gradient_cai0h")
+
+[sub_resource type="Animation" id="Animation_qeyxp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.0714285, 1.0714285)]
+}
+
+[sub_resource type="Animation" id="Animation_4h3m3"]
+resource_name = "default"
+length = 1.7333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.6, 1.1, 1.6666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.0714285, 1.0714285), Vector2(0.9, 0.9), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.13333334, 0.56666666, 1.0666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.4745098), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.033333335, 0.46666667, 1, 1.4333333, 1.7333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.2617993877991494, 0.0, -0.2617993877991494, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gvb8p"]
+_data = {
+&"RESET": SubResource("Animation_qeyxp"),
+&"default": SubResource("Animation_4h3m3")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b3s3x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_olodv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cai0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bthj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bthj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_olodv")
+}],
+"loop": true,
+"name": &"place_mask",
+"speed": 3.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cai0h"]
+load_path = "res://.godot/imported/pop_mask.png-da38b6f820179cad196cc1dba83c3708.ctex"
+
+[sub_resource type="Animation" id="Animation_cai0h"]
+resource_name = "pop_mask"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.7, 0.7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mask:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1910.8511),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mask:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1120, 650)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mask:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.03333334),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.1884955592153878]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("playerHUDAnimatedSprite:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("wavepivot:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("wavepivot:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_bthj5"]
+resource_name = "interact_wave"
+length = 1.3666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("wavepivot:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.43333334, 0.6333333, 0.8333333, 1, 1.2333333),
+"transitions": PackedFloat32Array(2194.9912, 16384, 25709.262, 2194.9912, 2194.9912, 16384, 25709.262),
+"update": 0,
+"values": [0.0, -0.2617993877991494, 0.0, 0.2792526803190927, 0.0, -0.2617993877991494, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("wavepivot:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control/sayhipivot/say hi:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_olodv"]
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mask:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4666667),
+"transitions": PackedFloat32Array(29532.184, 4870.9893),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mask:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6333333),
+"transitions": PackedFloat32Array(16961.795, 477.71277, 1845.7603),
+"update": 0,
+"values": [Vector2(1125.07, 650), Vector2(1170, 450), Vector2(980, 200)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mask:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6333333),
+"transitions": PackedFloat32Array(4096, 12416.745, 4705.068),
+"update": 0,
+"values": [Vector2(0.7, 0.7), Vector2(0.8, 0.8), Vector2(1.2, 1.2)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mask:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6333333),
+"transitions": PackedFloat32Array(3444.3118, 8480.886, 21618.813),
+"update": 0,
+"values": [0.4153883619746506, 0.22689280275926285, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("playerHUDAnimatedSprite:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(13777.237, 5792.6187),
+"update": 1,
+"values": [&"place_mask", &"default"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bthj5"]
+_data = {
+&"RESET": SubResource("Animation_cai0h"),
+&"interact_wave": SubResource("Animation_bthj5"),
+&"pop_mask_on": SubResource("Animation_olodv")
+}
+
+[node name="GameHUD" type="Node2D" unique_id=1874539914]
+script = ExtResource("1_pexd4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1819659944]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=189485821]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Time" type="Label" parent="CanvasLayer/Control" unique_id=1990405648]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -129.0
+offset_top = 75.0
+offset_right = 130.0
+offset_bottom = 156.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bthj5")
+theme_override_font_sizes/font_size = 160
+text = "11:50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="battery_label" type="Label" parent="CanvasLayer/Control" unique_id=463228300]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 78.0
+offset_top = -218.0
+offset_right = 380.0
+offset_bottom = -101.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qeyxp")
+theme_override_font_sizes/font_size = 100
+text = "social battery"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mask_indicator" type="Sprite2D" parent="CanvasLayer/Control/battery_label" unique_id=1395421526]
+position = Vector2(72, 359)
+
+[node name="likeabilitylabel" type="Label" parent="CanvasLayer/Control" unique_id=1311939390]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -347.0
+offset_top = -183.0
+offset_right = -86.0
+offset_bottom = -102.0
+grow_horizontal = 0
+grow_vertical = 0
+rotation = -0.0018330785
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qeyxp")
+theme_override_font_sizes/font_size = 100
+text = "likeability"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pause_menu_button" type="Button" parent="CanvasLayer/Control" unique_id=1599814623 node_paths=PackedStringArray("load_menu")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -53.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "menu"
+script = ExtResource("1_jna2d")
+load_menu = NodePath("../pause_menu")
+
+[node name="pause_menu" type="Control" parent="CanvasLayer/Control" unique_id=1805344916]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control/pause_menu" unique_id=2038507952]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.372549)
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/Control/pause_menu" unique_id=1752154280]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -291.0
+offset_top = -286.0
+offset_right = 291.0
+offset_bottom = 286.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.282353)
+
+[node name="RESUME" type="Button" parent="CanvasLayer/Control/pause_menu/ColorRect2" unique_id=865836702 node_paths=PackedStringArray("load_menu")]
+z_index = 6
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 212.0
+offset_top = 250.0
+offset_right = 284.0
+offset_bottom = 281.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "RESUME"
+script = ExtResource("1_jna2d")
+load_menu = NodePath("../..")
+menu_on = false
+
+[node name="back_to_main" type="Button" parent="CanvasLayer/Control/pause_menu/ColorRect2" unique_id=1970239662]
+z_index = 6
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.0
+offset_top = 249.0
+offset_right = -237.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "QUIT"
+script = ExtResource("2_n64bn")
+change_to_scene = "res://scenes/levels/main_menu.tscn"
+
+[node name="socialbattery" type="TextureProgressBar" parent="CanvasLayer/Control" unique_id=457492417]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = -83.0
+offset_right = 414.0
+offset_bottom = -43.0
+grow_vertical = 0
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture1D_4h3m3")
+texture_progress = SubResource("GradientTexture2D_qeyxp")
+
+[node name="likeability" type="TextureProgressBar" parent="CanvasLayer/Control" unique_id=1767600171]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -396.0
+offset_top = -84.0
+offset_right = -39.0
+offset_bottom = -44.0
+grow_horizontal = 0
+grow_vertical = 0
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture1D_hwndf")
+texture_progress = SubResource("GradientTexture2D_bthj5")
+
+[node name="sayhipivot" type="Control" parent="CanvasLayer/Control" unique_id=52359310]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 129.0
+offset_right = 20.0
+offset_bottom = 169.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0714285, 1.0714285)
+
+[node name="say hi" type="Label" parent="CanvasLayer/Control/sayhipivot" unique_id=1101759975]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -85.0
+offset_right = 130.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.008552105
+scale = Vector2(0.9911916, 0.9911916)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qeyxp")
+theme_override_font_sizes/font_size = 100
+text = "say hi"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/sayhipivot/say hi" unique_id=2131005759]
+libraries/ = SubResource("AnimationLibrary_gvb8p")
+autoplay = &"default"
+
+[node name="GameOverScreen" type="ColorRect" parent="CanvasLayer/Control" unique_id=1711668115]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.42352942)
+
+[node name="GameOverMessage" type="Label" parent="CanvasLayer/Control/GameOverScreen" unique_id=731944718]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.0
+offset_top = -58.5
+offset_right = 577.0
+offset_bottom = 58.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qeyxp")
+theme_override_font_sizes/font_size = 100
+text = "Really? You couldn't make  it until midnight? 
+Lame."
+horizontal_alignment = 1
+
+[node name="game_hint_label" type="Label" parent="CanvasLayer/Control" unique_id=1513148300]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -131.0
+offset_top = -286.99994
+offset_right = 130.0
+offset_bottom = -169.99994
+grow_horizontal = 2
+grow_vertical = 0
+rotation = -0.0018330785
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qeyxp")
+theme_override_font_sizes/font_size = 100
+text = "hint"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="playerHUDAnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1748997832]
+position = Vector2(1126, 82)
+sprite_frames = SubResource("SpriteFrames_b3s3x")
+autoplay = "default"
+
+[node name="Mask" type="Sprite2D" parent="." unique_id=1776397254]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1120, 650)
+rotation = 0.18849556
+scale = Vector2(0.7, 0.7)
+texture = SubResource("CompressedTexture2D_cai0h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=517989015]
+libraries/ = SubResource("AnimationLibrary_bthj5")
+autoplay = &"RESET"
+
+[node name="wavepivot" type="Node2D" parent="." unique_id=1128010406]
+visible = false
+position = Vector2(1965, 1613)
+
+[node name="Handwave" type="Sprite2D" parent="wavepivot" unique_id=276154548]
+position = Vector2(-382, -926)
+texture = ExtResource("9_cai0h")

@@ -1,0 +1,423 @@
+[gd_scene format=3 uid="uid://d2kr208xhsep6"]
+
+[ext_resource type="Texture2D" uid="uid://cvrtg0kdxnf3a" path="res://assets/art/2dart/phone.png" id="1_6afxl"]
+[ext_resource type="Texture2D" uid="uid://b5j8r0ar8ibrw" path="res://assets/art/2dart/monocle_mask.png" id="1_tnjd1"]
+[ext_resource type="Texture2D" uid="uid://cy0cvycfb7lu4" path="res://assets/art/2dart/pop_mask.png" id="2_6afxl"]
+[ext_resource type="Texture2D" uid="uid://vr648s8m386p" path="res://assets/art/2dart/sport_mask.png" id="3_qlwwa"]
+[ext_resource type="Texture2D" uid="uid://cyar31lwxgau4" path="res://assets/art/2dart/text_bubble_3.png" id="4_13pb0"]
+[ext_resource type="FontFile" uid="uid://c2scu7k5v1e18" path="res://assets/art/2dart/The Hand Black.otf" id="4_yt88a"]
+[ext_resource type="Texture2D" uid="uid://dntjf3vpe61lb" path="res://assets/art/2dart/crowd_frame1.png" id="8_13pb0"]
+[ext_resource type="Texture2D" uid="uid://db2fk4qwsdgm5" path="res://assets/art/2dart/text bubble_1.png" id="8_e76uv"]
+[ext_resource type="Script" uid="uid://jjxf6f8ymoa" path="res://scripts/scene_change_button.gd" id="8_y6fol"]
+[ext_resource type="Texture2D" uid="uid://dxramahyymx7t" path="res://assets/art/2dart/crowd_frame_2.png" id="9_e76uv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6fol"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_13pb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_e76uv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TutorialScene" type="Node2D" unique_id=686813725]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1398911793]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1536427622]
+z_as_relative = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="phone" type="TextureRect" parent="CanvasLayer" unique_id=1370787404]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -648.0
+offset_top = -110.0
+offset_right = 913.0
+offset_bottom = 1244.0
+grow_horizontal = 2
+texture = ExtResource("1_6afxl")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/phone" unique_id=1404631032]
+z_index = -1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -377.5
+offset_top = 193.0
+offset_right = 179.5
+offset_bottom = 1173.0
+grow_horizontal = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/phone/ColorRect" unique_id=1390709674]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -278.5
+offset_top = 5.0
+offset_right = 270.5
+offset_bottom = 975.0
+grow_horizontal = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/phone/ColorRect/Panel" unique_id=675934376]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -272.5
+offset_top = -3.0
+offset_right = 273.5
+offset_bottom = 968.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer" unique_id=701510274]
+layout_mode = 2
+alignment = 2
+
+[node name="texts" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer" unique_id=687231734]
+layout_mode = 2
+text = "kdkkdowkdwdwdwddwd                                        
+d
+dd
+d
+
+dd
+d
+d
+d
+d
+d
+d
+dd
+d
+d
+d
+d
+d
+d
+dd
+d
+d
+d
+d
+d
+d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+
+[node name="textmessage7" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=590501942]
+position = Vector2(184, 774)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_13pb0")
+region_enabled = true
+region_rect = Rect2(655.6184, 375.26425, 485.03015, 228.24948)
+
+[node name="text1" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/textmessage7" unique_id=734873551]
+offset_left = -203.74998
+offset_top = -62.500034
+offset_right = 244.25002
+offset_bottom = 60.499966
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "Sports
+Politics
+Movies"
+
+[node name="MonocleMask" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/textmessage7" unique_id=185165416]
+position = Vector2(25.000122, -4.875)
+scale = Vector2(0.062499996, 0.062499996)
+texture = ExtResource("1_tnjd1")
+
+[node name="PopMask" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/textmessage7" unique_id=1990381459]
+position = Vector2(118.75, -7.375)
+scale = Vector2(0.062499996, 0.062499996)
+texture = ExtResource("2_6afxl")
+
+[node name="SportMask" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/textmessage7" unique_id=567635925]
+position = Vector2(-66.25, -9.875)
+scale = Vector2(0.062499996, 0.062499996)
+texture = ExtResource("3_qlwwa")
+
+[node name="textmessage8" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=994051357]
+position = Vector2(184, 949.99994)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_13pb0")
+region_enabled = true
+region_rect = Rect2(655.6184, 375.26425, 485.03015, 228.24948)
+
+[node name="text1" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/textmessage8" unique_id=638824368]
+offset_left = -192.49998
+offset_top = -76.25003
+offset_right = 255.50002
+offset_bottom = 76.74997
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "Just try to match your \"people masks\"
+ or whatever you call them with the icons
+above their heads or you will definitely drain your 
+social battery too quickly."
+
+[node name="textmessage9" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=470999068]
+position = Vector2(184, 1115)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_13pb0")
+region_enabled = true
+region_rect = Rect2(655.6184, 375.26425, 485.03015, 228.24948)
+
+[node name="text1" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/textmessage9" unique_id=1326282042]
+offset_left = -192.49998
+offset_top = -76.25003
+offset_right = 255.50002
+offset_bottom = 76.74997
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "And remember you just use the number keys 1-3 to 
+switch masks, and press [E] to wave and say hi to people
+I know you are driving so you won't be drunk anyway
+but remember its just WASD to move around."
+
+[node name="textmessage10" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=1877276584]
+position = Vector2(184, 1276)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_13pb0")
+region_enabled = true
+region_rect = Rect2(655.6184, 375.26425, 485.03015, 228.24948)
+
+[node name="text1" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/textmessage10" unique_id=1044013815]
+offset_left = -192.49998
+offset_top = -76.25003
+offset_right = 255.50002
+offset_bottom = 76.74997
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "Also don't try doing that thing where you avoid 
+everyone like last time. People notice and if you are too
+ antisocial you will get us both kicked out."
+
+[node name="text_message2" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=1052957454]
+position = Vector2(198.99988, 170.39996)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_13pb0")
+region_enabled = true
+region_rect = Rect2(655.6184, 375.26425, 485.03015, 228.24948)
+
+[node name="text1" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/text_message2" unique_id=1031477157]
+offset_left = -203.74998
+offset_top = -62.500034
+offset_right = 244.25002
+offset_bottom = 60.499966
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "I PROMISE we can leave at midnight
+Just try to hang in there and not make everyone hate you
+Just try to do it like we practiced ok?"
+
+[node name="text_message6" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=1208222233]
+position = Vector2(193, 614)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_13pb0")
+region_enabled = true
+region_rect = Rect2(655.6184, 375.26425, 485.03015, 228.24948)
+
+[node name="text1" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/text_message6" unique_id=1166428507]
+offset_left = -203.74998
+offset_top = -62.500034
+offset_right = 244.25002
+offset_bottom = 60.499966
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "To help you not get confused
+ I broke it into 3 simple categories for you
+Sports, Politics and Movies
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="text_message1" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=2037466792]
+position = Vector2(193.99988, 50.399963)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_e76uv")
+region_enabled = true
+region_rect = Rect2(665.46686, 429.06674, 464.93353, 121.73337)
+
+[node name="text1" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/text_message1" unique_id=780809136]
+offset_left = -161.25006
+offset_top = -21.250004
+offset_right = 145.74994
+offset_bottom = 18.749996
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "Yo, thanks for taking me to this party tonight."
+
+[node name="text_message3" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=28766868]
+position = Vector2(192.99988, 294.3999)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_e76uv")
+region_enabled = true
+region_rect = Rect2(665.46686, 429.06674, 464.93353, 121.73337)
+
+[node name="text1" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/text_message3" unique_id=848272540]
+offset_left = -161.25006
+offset_top = -21.250004
+offset_right = 145.74994
+offset_bottom = 18.749996
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "No weird talk talk. Seriously."
+
+[node name="text_message7" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=181389630]
+position = Vector2(185, 1412)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_e76uv")
+region_enabled = true
+region_rect = Rect2(665.46686, 429.06674, 464.93353, 121.73337)
+
+[node name="text1" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/text_message7" unique_id=782105378]
+offset_left = -161.25006
+offset_top = -21.250004
+offset_right = 145.74994
+offset_bottom = 18.749996
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "Remember. Just hold on till midnight."
+
+[node name="text_message8" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=325568500]
+position = Vector2(305, 1514)
+scale = Vector2(-0.8, 0.8)
+texture = ExtResource("8_e76uv")
+region_enabled = true
+region_rect = Rect2(665.46686, 429.06674, 464.93353, 121.73337)
+
+[node name="text_message4" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=1774779923]
+position = Vector2(182.99988, 392.39993)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_e76uv")
+region_enabled = true
+region_rect = Rect2(665.46686, 429.06674, 464.93353, 121.73337)
+
+[node name="text1" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/text_message4" unique_id=650403512]
+offset_left = -161.25006
+offset_top = -21.250004
+offset_right = 145.74994
+offset_bottom = 18.749996
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "Not everyone has a favourite Pokemon ability..."
+
+[node name="text_message5" type="Sprite2D" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=858795446]
+position = Vector2(195, 482.00003)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_e76uv")
+region_enabled = true
+region_rect = Rect2(665.46686, 429.06674, 464.93353, 121.73337)
+
+[node name="text1" type="Label" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts/text_message5" unique_id=1247361799]
+offset_left = -161.24998
+offset_top = -21.250004
+offset_right = 194.75002
+offset_bottom = 18.749996
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "to help I broke it into 3 simple categories for you"
+
+[node name="Button" type="Button" parent="CanvasLayer/phone/ColorRect/Panel/ScrollContainer/VBoxContainer/texts" unique_id=335152157]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 1493.0
+offset_right = 396.0
+offset_bottom = 1537.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_yt88a")
+theme_override_font_sizes/font_size = 30
+text = "See you there !"
+script = ExtResource("8_y6fol")
+change_to_scene = "res://scenes/levels/mainscene.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1261516194]
+z_index = -5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0.60933006, 0.6093301, 0.60933006, 1)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer/ColorRect" unique_id=260096352]
+position = Vector2(1528.0001, 574.00006)
+scale = Vector2(0.3638889, 0.3638889)
+sprite_frames = SubResource("SpriteFrames_y6fol")
+autoplay = "default"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="CanvasLayer/ColorRect" unique_id=804125815]
+position = Vector2(450.00012, 582.00006)
+scale = Vector2(0.3638889, 0.3638889)
+sprite_frames = SubResource("SpriteFrames_y6fol")
+autoplay = "default"

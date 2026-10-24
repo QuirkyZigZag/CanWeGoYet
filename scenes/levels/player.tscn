@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://cfewxpc7umd0x"]
+
+[ext_resource type="Script" uid="uid://csx46186eqcw6" path="res://scripts/player.gd" id="1_rggrj"]
+[ext_resource type="Shader" uid="uid://cyahjpmpkayg3" path="res://assets/art/shaderstuff/outlineshader.gdshader" id="2_5pofk"]
+[ext_resource type="Script" uid="uid://o68b7ktclihf" path="res://scenes/levels/screen_shader.gd" id="3_028os"]
+[ext_resource type="PackedScene" uid="uid://u4e7xft0hd8q" path="res://scenes/game_hud.tscn" id="3_fdfyx"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nl1e7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pofk"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_fdfyx"]
+material = SubResource("StandardMaterial3D_5pofk")
+size = Vector2(4, 4)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5pofk"]
+render_priority = 0
+shader = ExtResource("2_5pofk")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/shadow_thickness = 2.0
+shader_parameter/aberration_strength = 0.010000000475
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5pofk"]
+radius = 0.08814359
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0xymu"]
+height = 1.501831
+
+[sub_resource type="Animation" id="Animation_028os"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("headPivot/Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("headPivot/Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("headPivot/Camera3D:fov")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [75.0]
+}
+
+[sub_resource type="Animation" id="Animation_3m52r"]
+resource_name = "faint"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("headPivot/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.8, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("headPivot/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03333333, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 1.5707964)]
+}
+
+[sub_resource type="Animation" id="Animation_1ty3f"]
+resource_name = "feedback"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("headPivot/Camera3D:fov")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [75.0, 50.0, 75.0]
+}
+
+[sub_resource type="Animation" id="Animation_frfce"]
+resource_name = "kicked_out"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("headPivot/Camera3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333336),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.10471976, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_frfce"]
+_data = {
+&"RESET": SubResource("Animation_028os"),
+&"faint": SubResource("Animation_3m52r"),
+&"feedback": SubResource("Animation_1ty3f"),
+&"kicked_out": SubResource("Animation_frfce")
+}
+
+[node name="Player" type="CharacterBody3D" unique_id=1668216989 groups=["player"]]
+script = ExtResource("1_rggrj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1545551268]
+mesh = SubResource("CapsuleMesh_nl1e7")
+
+[node name="headPivot" type="Node3D" parent="." unique_id=1489242084]
+
+[node name="Camera3D" type="Camera3D" parent="headPivot" unique_id=647566974]
+
+[node name="screen_shader" type="MeshInstance3D" parent="headPivot/Camera3D" unique_id=1156635344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.9124785)
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_fdfyx")
+surface_material_override/0 = SubResource("ShaderMaterial_5pofk")
+script = ExtResource("3_028os")
+
+[node name="interact_area" type="Area3D" parent="headPivot" unique_id=569872879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7343052, -0.7795571)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="headPivot/interact_area" unique_id=838630063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3451271, 0)
+shape = SubResource("SphereShape3D_5pofk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1761430434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24908447, 0)
+shape = SubResource("CapsuleShape3D_0xymu")
+
+[node name="GameHUD" parent="." unique_id=1874539914 instance=ExtResource("3_fdfyx")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=690818714]
+libraries/ = SubResource("AnimationLibrary_frfce")

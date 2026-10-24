@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dyd3kqkvacd32"]
+
+[ext_resource type="Texture2D" uid="uid://dntjf3vpe61lb" path="res://assets/art/2dart/crowd_frame1.png" id="1_d24v3"]
+[ext_resource type="Texture2D" uid="uid://dxramahyymx7t" path="res://assets/art/2dart/crowd_frame_2.png" id="2_31vpn"]
+[ext_resource type="Script" uid="uid://bxawdh0fc1lhs" path="res://scenes/crowd.gd" id="3_31vpn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0xymu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_d24v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_31vpn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_d24v3"]
+
+[sub_resource type="Animation" id="Animation_d24v3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.1, 0.1, 0.1)]
+}
+
+[sub_resource type="Animation" id="Animation_31vpn"]
+resource_name = "idle"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.8333333, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.1, 0.1, 0.1), Vector3(0.102, 0.102, 0.102), Vector3(0.1, 0.1, 0.1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fvvip"]
+_data = {
+&"RESET": SubResource("Animation_d24v3"),
+&"idle": SubResource("Animation_31vpn")
+}
+
+[node name="crowd" type="AnimatedSprite3D" unique_id=470209113]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+billboard = 2
+alpha_cut = 1
+sprite_frames = SubResource("SpriteFrames_0xymu")
+autoplay = "default"
+script = ExtResource("3_31vpn")
+
+[node name="crowdbody" type="StaticBody3D" parent="." unique_id=16661343]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="crowdbody" unique_id=1848512626]
+shape = SubResource("SphereShape3D_d24v3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=343216708]
+libraries/ = SubResource("AnimationLibrary_fvvip")
+autoplay = &"idle"

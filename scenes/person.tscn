@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://bafd5se8xy0jo"]
+
+[ext_resource type="Texture2D" uid="uid://k8dfeswb1twk" path="res://assets/art/2dart/blank_person.png" id="1_0pife"]
+[ext_resource type="Script" uid="uid://dinko0rfil4n6" path="res://scenes/person.gd" id="2_5dovg"]
+[ext_resource type="Texture2D" uid="uid://dlmsshveraek5" path="res://assets/art/2dart/walkaway1.png" id="2_526uv"]
+[ext_resource type="Texture2D" uid="uid://bft4kb8al8k5j" path="res://assets/art/2dart/walk_1.png" id="3_2jjoq"]
+[ext_resource type="Texture2D" uid="uid://c1ttunxnjs8l0" path="res://assets/art/2dart/walkaway4.png" id="3_yhvuw"]
+[ext_resource type="Texture2D" uid="uid://ei53hxipm08q" path="res://assets/art/2dart/walkwaway3.png" id="4_06ebq"]
+[ext_resource type="Texture2D" uid="uid://ds71oe6e6orif" path="res://assets/art/2dart/walk_2.png" id="4_ym70v"]
+[ext_resource type="Texture2D" uid="uid://p2ujmdof67vo" path="res://assets/art/2dart/walk_3.png" id="5_8qhow"]
+[ext_resource type="Texture2D" uid="uid://bge72rls2abdf" path="res://assets/art/2dart/walkway2.png" id="5_gqr4j"]
+[ext_resource type="Texture2D" uid="uid://d027not7hjrhr" path="res://assets/art/2dart/walk_4.png" id="6_526uv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hncb1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0pife")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"interacted_with",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_526uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yhvuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_06ebq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gqr4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_526uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yhvuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_06ebq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gqr4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_526uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yhvuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_06ebq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gqr4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_526uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yhvuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_06ebq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gqr4j")
+}],
+"loop": false,
+"name": &"walk away",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2jjoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ym70v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8qhow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_526uv")
+}],
+"loop": true,
+"name": &"walk_towards",
+"speed": 5.0
+}]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0pife"]
+radius = 3.8382213
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hncb1"]
+radius = 4.3648767
+
+[sub_resource type="Animation" id="Animation_jf287"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 4.5489216, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.07, 0.07, 0.07)]
+}
+
+[sub_resource type="Animation" id="Animation_h4n5y"]
+resource_name = "idle"
+length = 1.5333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("icon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.73333335, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 4.5489216, 0), Vector3(0, 4, 0), Vector3(0, 4.5489216, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_526uv"]
+resource_name = "interacted_with"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.26666668, 0.53333336, 0.8333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.07, 0.07, 0.07), Vector3(0.08, 0.08, 0.08), Vector3(0.07, 0.07, 0.07)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8487m"]
+_data = {
+&"RESET": SubResource("Animation_jf287"),
+&"idle": SubResource("Animation_h4n5y"),
+&"interacted_with": SubResource("Animation_526uv")
+}
+
+[node name="person" type="AnimatedSprite3D" unique_id=2090233463 groups=["enemy"]]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0, 0, 0)
+billboard = 2
+alpha_cut = 1
+sprite_frames = SubResource("SpriteFrames_hncb1")
+autoplay = "default"
+script = ExtResource("2_5dovg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2141190989 groups=["enemy"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=898859583 groups=["enemy"]]
+shape = SubResource("SphereShape3D_0pife")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1327385462 groups=["enemy"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1845513816 groups=["enemy"]]
+shape = SubResource("SphereShape3D_hncb1")
+debug_color = Color(0, 0.6432752, 0.3085693, 0.41960785)
+
+[node name="icon" type="Sprite3D" parent="." unique_id=1216809604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5489216, 0)
+billboard = 2
+alpha_cut = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1168175286]
+libraries/ = SubResource("AnimationLibrary_8487m")
+autoplay = &"idle"
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1386722214]
+simplify_path = true
